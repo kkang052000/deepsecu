@@ -932,7 +932,10 @@ footer{
           </select>
         </div>
         <div class="fg"><label>문의 내용</label><textarea placeholder="문의하실 내용을 자유롭게 작성해주세요.&#10;예) 현재 보안 상황, 필요한 서비스, 일정 등"></textarea></div>
-        <button class="submit-btn" onclick="alert('문의가 접수되었습니다.\n빠른 시일 내 연락드리겠습니다. 감사합니다!')">문의 보내기 →</button>
+        <form id="contact-form" action="https://formspree.io/f/mwvwkarr" method="POST" style="display:contents;">
+<input type="hidden" name="_replyto" value="">
+<button type="submit" class="submit-btn">문의 보내기 →</button>
+</form>
       </div>
     </div>
 
