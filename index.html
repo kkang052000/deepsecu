@@ -1065,4 +1065,14 @@ function filterPf(btn,cat){
 
 /* ── 초기 리빌 ── */
 window.addEventListener('load',()=>{
-  doc
+  document.querySelectorAll('#page-home .reveal').forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('visible'),i*90);
+  });
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+  },{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+});
+</script>
+</body>
+</html>
