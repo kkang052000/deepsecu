@@ -929,12 +929,31 @@ footer{
 
     <!-- 지도 영역 -->
     <div class="inner">
-      <div class="map-placeholder">
-        <div class="map-ico">🗺️</div>
-        <p><strong>서울시 송파구 마천로8길 1(오금동), 3층 112호</strong></p>
-        <p style="font-size:.8rem;color:var(--gray);">지하철 5호선 오금역 2번 출구 도보 5분</p>
+      <div style="margin-top:50px;">
+      <div style="border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.3);">
+        <iframe
+          src="https://map.kakao.com/link/map/DeepSecu,37.495610,127.124870/embed"
+          width="100%" height="400"
+          style="display:block;border:none;"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:16px;padding:18px 22px;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:1.3rem;">📍</span>
+          <div>
+            <div style="font-size:.9rem;font-weight:600;color:var(--light);">서울시 송파구 마천로8길 1(오금동), 3층 112호</div>
+            <div style="font-size:.78rem;color:var(--gray);margin-top:3px;">지하철 5호선 오금역 2번 출구 도보 5분</div>
+          </div>
+        </div>
+        <a href="https://map.kakao.com/link/to/DeepSecu,37.495610,127.124870"
+           target="_blank"
+           style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#FAE100,#F9CF00);color:#3C1E1E;padding:9px 18px;border-radius:6px;font-size:.82rem;font-weight:700;text-decoration:none;white-space:nowrap;">
+          🗺️ 카카오맵으로 길찾기
+        </a>
       </div>
     </div>
+  </div>
   </section>
 </div>
 
