@@ -288,7 +288,7 @@ nav{
 .pf-badge{display:inline-block;background:rgba(0,200,255,.09);border:1px solid rgba(0,200,255,.22);color:var(--cyan);font-size:.68rem;padding:2px 10px;border-radius:3px;}
 
 /* 주요고객 */
-.client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;}
+.client-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px;}
 .client-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:24px;text-align:center;transition:all .3s;}
 .client-card:hover{border-color:rgba(61,155,255,.3);transform:translateY(-3px);}
 .client-ico{font-size:2rem;margin-bottom:8px;}
@@ -375,7 +375,8 @@ footer{
   .nav-tel{display:none;}
   .sec,.page-banner{padding:60px 20px;}
   #page-home .hero{padding:60px 20px 160px;}
-  .svc-grid,.pf-grid,.perf-stats,.client-grid{grid-template-columns:1fr;}
+  .svc-grid,.pf-grid,.perf-stats{grid-template-columns:1fr;}
+  .client-grid{grid-template-columns:repeat(2,1fr);}
   .about-grid,.biz-detail,.contact-grid,.footer-top{grid-template-columns:1fr;gap:30px;}
   .num-grid{grid-template-columns:1fr 1fr;}
   .hero-stats{left:20px;right:20px;bottom:30px;justify-content:center;gap:24px;}
@@ -857,16 +858,18 @@ footer{
       <div class="inner">
         <p class="sec-label">Our Clients</p>
         <h2 class="sec-title">주요 고객사</h2>
-        <p class="sec-desc">다양한 산업 분야의 기업과 함께하고 있습니다.</p>
+        <p class="sec-desc">공공기관 및 지자체 산하 기관과 함께하고 있습니다.</p>
         <div class="client-grid">
-          <div class="client-card"><div class="client-ico">🏦</div><div class="client-name">금융·보험</div><div class="client-type">은행, 증권, 보험사 등</div></div>
-          <div class="client-card"><div class="client-ico">🏥</div><div class="client-name">의료·헬스케어</div><div class="client-type">병원, 의료재단, 헬스케어</div></div>
-          <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">공공·정부</div><div class="client-type">공공기관, 지자체, 정부기관</div></div>
-          <div class="client-card"><div class="client-ico">🛍️</div><div class="client-name">유통·이커머스</div><div class="client-type">온라인 쇼핑몰, 유통사</div></div>
-          <div class="client-card"><div class="client-ico">🏭</div><div class="client-name">제조·물류</div><div class="client-type">제조기업, 물류·SCM</div></div>
-          <div class="client-card"><div class="client-ico">📱</div><div class="client-name">IT·플랫폼</div><div class="client-type">스타트업, SaaS, 플랫폼</div></div>
-          <div class="client-card"><div class="client-ico">🎓</div><div class="client-name">교육</div><div class="client-type">대학, 교육기관, 에듀테크</div></div>
-          <div class="client-card"><div class="client-ico">⚡</div><div class="client-name">에너지·인프라</div><div class="client-type">에너지, 통신, 인프라</div></div>
+          <div class="client-card"><div class="client-ico">🏗️</div><div class="client-name">세종시설공단</div><div class="client-type">세종특별자치시 시설관리</div></div>
+          <div class="client-card"><div class="client-ico">🎭</div><div class="client-name">여주세종문화관광재단</div><div class="client-type">문화·관광 공공재단</div></div>
+          <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">양천구시설관리공단</div><div class="client-type">양천구 시설관리</div></div>
+          <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">은평구시설관리공단</div><div class="client-type">은평구 시설관리</div></div>
+          <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">송파구시설관리공단</div><div class="client-type">송파구 시설관리</div></div>
+          <div class="client-card"><div class="client-ico">🏙️</div><div class="client-name">강동구도시관리공단</div><div class="client-type">강동구 도시관리</div></div>
+          <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">도봉구시설관리공단</div><div class="client-type">도봉구 시설관리</div></div>
+          <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">강서구시설관리공단</div><div class="client-type">강서구 시설관리</div></div>
+          <div class="client-card"><div class="client-ico">🌾</div><div class="client-name">해외농업자원개발협회</div><div class="client-type">해외농업자원 개발·지원</div></div>
+          <div class="client-card"><div class="client-ico">⚖️</div><div class="client-name">서울노동권익센터</div><div class="client-type">노동자 권익보호 공공기관</div></div>
         </div>
       </div>
     </section>
@@ -891,7 +894,7 @@ footer{
         <p class="sec-desc">보안 문제는 빠를수록 좋습니다.<br>지금 바로 전문가와 상담하세요.</p>
         <div class="contact-info-cards">
           <div class="ci-card"><div class="ci-ico">📞</div><div><div class="ci-label">전화</div><div class="ci-val">010-3858-0046</div></div></div>
-          <div class="ci-card"><div class="ci-ico">✉️</div><div><div class="ci-label">이메일</div><div class="ci-val">haruty@deepsecu.co.kr</div></div></div>
+          <div class="ci-card"><div class="ci-ico">✉️</div><div><div class="ci-label">이메일</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ee6effcfbfaf7ceeaebebfefdebedfba0ede1a0e5fc">[email&#160;protected]</a></div></div></div>
           <div class="ci-card"><div class="ci-ico">📍</div><div><div class="ci-label">주소</div><div class="ci-val">서울시 송파구 마천로8길 1(오금동), 3층 112호</div></div></div>
           <div class="ci-card"><div class="ci-ico">👤</div><div><div class="ci-label">담당자</div><div class="ci-val">이태용 팀장</div></div></div>
           <div class="ci-card"><div class="ci-ico">🕐</div><div><div class="ci-label">상담 가능 시간</div><div class="ci-val">평일 09:00 – 18:00<br><span style="font-size:.78rem;color:var(--gray);">긴급 침해사고는 24시간 대응</span></div></div></div>
@@ -964,7 +967,7 @@ footer{
     <div class="footer-col">
       <h5>Contact</h5>
       <a href="tel:010-3858-0046">010-3858-0046</a>
-      <a href="mailto:haruty@deepsecu.co.kr">haruty@deepsecu.co.kr</a>
+      <a href="/cdn-cgi/l/email-protection#8fe7eefdfafbf6cfebeaeafffceaecfaa1ece0a1e4fd"><span class="__cf_email__" data-cfemail="f49c958681808db49091918487919781da979bda9f86">[email&#160;protected]</span></a>
       <a href="#" onclick="showPage('contact');return false;">문의하기</a>
     </div>
   </div>
@@ -974,7 +977,7 @@ footer{
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── 파티클 캔버스 ── */
 const canvas=document.getElementById('bg-canvas');
 const ctx=canvas.getContext('2d');
@@ -1044,14 +1047,4 @@ function filterPf(btn,cat){
 
 /* ── 초기 리빌 ── */
 window.addEventListener('load',()=>{
-  document.querySelectorAll('#page-home .reveal').forEach((el,i)=>{
-    setTimeout(()=>el.classList.add('visible'),i*90);
-  });
-  const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
-  },{threshold:.1});
-  document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
-});
-</script>
-</body>
-</html>
+  doc
