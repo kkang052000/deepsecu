@@ -942,7 +942,7 @@ footer{
 
     <!-- 지도 영역 -->
     <div class="inner">
-      <div class="map-wrap">
+      <div class="map-wrap" id="map-section">
         <iframe
           src="https://map.kakao.com/link/map/DeepSecu,37.499117,127.130883/embed"
           style="border:none;"
@@ -1023,6 +1023,11 @@ function showPage(id, sub){
   if(id==='business'&&sub!==undefined) switchBizTab(typeof sub==='number'?sub:0);
   if(id==='company'&&sub) switchCompanyTab(null,sub);
   if(id==='performance'&&sub) switchPerfTab(null,sub);
+  if(id==='contact' && sub==='location'){
+    setTimeout(()=>{
+      document.getElementById('map-section')?.scrollIntoView({behavior:'smooth'});
+    }, 200);
+  }
   // nav 활성
   document.querySelectorAll('.gnb > li > a').forEach(a=>a.classList.remove('active'));
   const map={company:'Company',business:'Business',performance:'Performance',contact:'Contact Us'};
