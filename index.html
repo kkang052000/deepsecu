@@ -942,12 +942,13 @@ footer{
 
       <div class="contact-form">
         <h3 style="font-family:'Rajdhani',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:24px;color:var(--cyan);">무료 상담 신청</h3>
+<form id="contact-form" action="https://formspree.io/f/mwvwkarr" method="POST">
         <div class="form-row">
-          <div class="fg"><label>성함 *</label><input type="text" placeholder="홍길동"></div>
-          <div class="fg"><label>회사명 *</label><input type="text" placeholder="(주)회사명"></div>
+          <div class="fg"><label>성함 *</label><input type="text" name="성함" placeholder="홍길동" required></div>
+          <div class="fg"><label>회사명 *</label><input type="text" name="회사명" placeholder="(주)회사명" required></div>
         </div>
         <div class="form-row">
-          <div class="fg"><label>연락처 *</label><input type="tel" placeholder="010-0000-0000"></div>
+          <div class="fg"><label>연락처 *</label><input type="tel" name="연락처" placeholder="010-0000-0000" required></div>
           <div class="fg"><label>이메일</label><input type="email" placeholder="example@company.com"></div>
         </div>
         <div class="fg">
@@ -963,10 +964,8 @@ footer{
             <option>기타 문의</option>
           </select>
         </div>
-        <div class="fg"><label>문의 내용</label><textarea placeholder="문의하실 내용을 자유롭게 작성해주세요.&#10;예) 현재 보안 상황, 필요한 서비스, 일정 등"></textarea></div>
-        <form id="contact-form" action="https://formspree.io/f/mwvwkarr" method="POST" style="display:contents;">
-<input type="hidden" name="_replyto" value="">
-<button type="submit" class="submit-btn">문의 보내기 →</button>
+        <div class="fg"><label>문의 내용</label><textarea name="문의내용" placeholder="문의하실 내용을 자유롭게 작성해주세요.&#10;예) 현재 보안 상황, 필요한 서비스, 일정 등"></textarea></div>
+        <button type="submit" class="submit-btn">문의 보내기 →</button>
 </form>
       </div>
     </div>
