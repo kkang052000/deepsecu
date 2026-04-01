@@ -841,8 +841,9 @@ footer{
 
 <!-- ══════════════════════════
      PERFORMANCE PAGE
-<div id="page-performance" class="page">
   ══════════════════════════ -->
+<div id="page-performance" class="page">
+
   <div class="page-banner">
     <div class="breadcrumb">Home > <span>Performance</span></div>
     <h1>수행 실적</h1>
@@ -950,11 +951,12 @@ footer{
         </div>
         <div class="form-row">
           <div class="fg"><label>연락처 *</label><input type="tel" name="연락처" placeholder="010-0000-0000" required></div>
-          <div class="fg"><label>이메일</label><input type="email" placeholder="example@company.com"></div>
+          <div class="fg"><label>이메일</label><input type="email" name="이메일" placeholder="example@company.com">
+```</div>
         </div>
         <div class="fg">
           <label>문의 서비스 *</label>
-          <select>
+          <select name="문의서비스" required>
             <option value="">서비스를 선택해주세요</option>
             <option>정보보안 컨설팅</option>
             <option>개인정보보호 컨설팅</option>
