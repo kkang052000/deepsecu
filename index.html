@@ -61,7 +61,6 @@ nav{
 }
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;}
 .nav-logo svg{width:30px;height:30px;}
-/* 로고 영문 서체 변경 */
 .nav-logo span{font-family:'Plus Jakarta Sans', sans-serif;font-size:1.45rem;font-weight:800;color:var(--text-main);letter-spacing:-0.5px;}
 .nav-logo span em{color:var(--accent);font-style:normal;}
 
@@ -306,7 +305,7 @@ nav{
 .pf-desc{font-size:.85rem;color:var(--text-muted);line-height:1.6;font-weight:500;}
 .pf-badge{display:inline-block;background:rgba(30,111,207,.08);border:1px solid rgba(30,111,207,.2);color:var(--accent);font-size:.72rem;padding:3px 10px;border-radius:4px;font-weight:700;margin-top:12px;}
 
-/* 주요고객 */
+/* 주요고객 - 데스크톱 4열 / 태블릿-모바일 그리드 미세패치 */
 .client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;}
 .client-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:24px;text-align:center;box-shadow:0 5px 14px var(--shadow);transition:all .3s;}
 .client-card:hover{border-color:var(--bright);transform:translateY(-3px);}
@@ -912,7 +911,7 @@ footer{
     </section>
   </div>
 
-  <!-- 주요고객사 -->
+  <!-- 주요고객사 (국립극단 추가 완료) -->
   <div id="ptab-clients" style="display:none;">
     <section class="sec">
       <div class="inner">
@@ -920,6 +919,7 @@ footer{
         <h2 class="sec-title">주요 고객사</h2>
         <p class="sec-desc">다양한 산업 분야의 기업과 함께하고 있습니다.</p>
         <div class="client-grid">
+          <div class="client-card"><div class="client-ico">🎭</div><div class="client-name">문화·예술</div><div class="client-type">국립극단</div></div>
           <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">공공·정부</div><div class="client-type">여주세종문화관광재단</div></div>
           <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">공공·정부</div><div class="client-type">양천구시설관리공단</div></div>
           <div class="client-card"><div class="client-ico">🏛️</div><div class="client-name">공공·정부</div><div class="client-type">은평구시설관리공단</div></div>
