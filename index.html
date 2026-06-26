@@ -7,6 +7,7 @@
 <meta name="description" content="딥시큐(DeepSecu)는 공공기관 및 유관기관 정보보안 및 개인정보보호 컨설팅 전문 기업입니다.">
 <title>딥시큐 DeepSecu | 정보보안 · 개인정보보호 컨설팅</title>
 
+<!-- 최신 프리텐다드(Pretendard) 및 글로벌 테크 감성의 Plus Jakarta Sans, Bebas Neue 서체 로드 -->
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 
@@ -118,7 +119,7 @@ nav{
 .page.active{display:block;}
 
 /* ══════════════════════════════════
-   PAGE HERO BANNER (서브페이지 기술적 배경 레이어 고도화)
+   PAGE HERO BANNER
 ══════════════════════════════════ */
 .page-banner{
   position:relative;z-index:1;
@@ -127,7 +128,6 @@ nav{
   border-bottom:1px solid var(--border);
   overflow:hidden;
 }
-/* 매트릭스 그리드 인프라 오버레이 */
 .page-banner::before{
   content:'';position:absolute;inset:0;
   background-image: linear-gradient(rgba(30,111,207,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(30,111,207,.03) 1px, transparent 1px);
@@ -168,7 +168,7 @@ nav{
 .btn-o{border:2px solid var(--accent);color:var(--accent);padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;transition:all .3s;display:inline-block;background:#ffffff;}
 .btn-o:hover{background:rgba(30,111,207,.08);border-color:var(--bright);color:var(--bright);}
 
-/* 카드 공통 - 글래스모피즘 오버레이 처리 */
+/* 카드 공통 */
 .card{
   background:var(--card-bg);
   backdrop-filter: blur(10px);
@@ -187,7 +187,6 @@ nav{
   min-height:calc(100vh - 68px);
   display:flex;align-items:center;
   padding:90px 60px;overflow:hidden;
-  /* 트렌디한 깊이감을 위한 테크니컬 공간 왜곡 효과 레이아웃 배경 */
   background: radial-gradient(circle at 80% 20%, #eaf3fc 0%, #f4f8fd 40%, #ffffff 80%);
 }
 .hero-grid{
@@ -225,7 +224,6 @@ nav{
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
 }
-/* 서비스 배경 스틀 가미 */
 .home-services::before {
   content: ''; position: absolute; inset: 0;
   background-image: radial-gradient(#1e6fcf 0.5px, transparent 0.5px);
@@ -253,7 +251,6 @@ nav{
   background: radial-gradient(circle, rgba(0, 200, 255, 0.05) 0%, transparent 70%);
 }
 .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:50px;position: relative; z-index: 2;}
-.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:50px;position: relative; z-index: 2;}
 .num-item{background:var(--card-bg);padding:38px 28px;text-align:center;}
 .num-big{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;color:var(--accent);line-height:1;margin-bottom:6px;letter-spacing:1px;}
 .num-label{font-size:.88rem;color:var(--text-muted);line-height:1.6;font-weight:700;}
@@ -280,7 +277,7 @@ nav{
 .tl-content p{font-size:.85rem;color:var(--text-muted);line-height:1.6;font-weight:500;}
 
 /* ══════════════════════════════════
-   BUSINESS PAGE
+   BUSINESS PAGE (일러스트 매핑 고도화)
 ══════════════════════════════════ */
 .biz-tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:50px;overflow-x:auto;}
 .biz-tab{
@@ -294,17 +291,15 @@ nav{
 .biz-panel.active{display:block;}
 
 .biz-detail{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start;}
-.biz-visual{
+.biz-visual-img{
   background:var(--bg-gray);border:1px solid var(--border);
-  border-radius:16px;padding:48px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  min-height:320px;text-align:center;
-  /* 모눈종이 보안 검증 인프라 배경 텍스처 오버레이 */
-  background-image: radial-gradient(rgba(30,111,207,0.06) 1.5px, transparent 1.5px);
-  background-size: 16px 16px;
+  border-radius:16px; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  min-height:320px; text-align:center; box-shadow:0 6px 16px var(--shadow);
 }
-.biz-visual .icon-big{font-size:4rem;margin-bottom:16px;}
-.biz-visual h3{font-size:1.5rem;font-weight:800;color:var(--accent);letter-spacing:-0.03em;}
+.biz-visual-img img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
 
 .biz-info h2{font-size:1.85rem;font-weight:800;color:var(--text-main);margin-bottom:16px;letter-spacing:-0.04em;}
 .biz-info p{color:var(--text-muted);font-size:.95rem;line-height:1.85;margin-bottom:24px;font-weight:500;}
@@ -370,39 +365,14 @@ nav{
 .fg textarea{height:105px;resize:vertical;}
 .fg select option{background:#ffffff; color:var(--text-main);} 
 
-/* 개인정보 수집 동의 스타일 고도화 */
-.fg-privacy {
-  margin-top: 18px;
-  margin-bottom: 20px;
-}
+.fg-privacy {margin-top: 18px; margin-bottom: 20px;}
 .privacy-box {
-  background: var(--bg-gray);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 10px 14px;
-  font-size: 0.78rem;
-  color: var(--text-light);
-  height: 75px;
-  overflow-y: auto;
-  line-height: 1.5;
-  margin-bottom: 8px;
-  font-weight: 500;
+  background: var(--bg-gray); border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px 14px; font-size: 0.78rem; color: var(--text-light);
+  height: 75px; overflow-y: auto; line-height: 1.5; margin-bottom: 8px; font-weight: 500;
 }
-.privacy-check {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--text-main);
-  cursor: pointer;
-}
-.privacy-check input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  accent-color: var(--accent);
-}
+.privacy-check { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 700; color: var(--text-main); cursor: pointer;}
+.privacy-check input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; accent-color: var(--accent);}
 
 .submit-btn{
   width:100%;background:linear-gradient(135deg,var(--accent),var(--bright));
@@ -417,10 +387,8 @@ nav{
 .map-wrap{margin-top:50px;border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 6px 20px var(--shadow);}
 .map-wrap iframe{display:block;width:100%;height:380px;border:none;}
 .map-info{
-  background:var(--card-bg);
-  padding:20px 28px;
-  display:flex;flex-wrap:wrap;gap:24px;align-items:center;
-  justify-content:space-between;
+  background:var(--card-bg); padding:20px 28px;
+  display:flex;flex-wrap:wrap;gap:24px;align-items:center; justify-content:space-between;
 }
 .map-info-item{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--text-muted);font-weight:600;}
 .map-info-item .ico{font-size:1.1rem;}
@@ -428,8 +396,7 @@ nav{
   display:inline-flex;align-items:center;gap:6px;
   background:linear-gradient(135deg,var(--accent),var(--bright));
   color:#fff;padding:10px 22px;border-radius:6px;
-  text-decoration:none;font-size:.85rem;font-weight:700;
-  transition:all .3s;
+  text-decoration:none;font-size:.85rem;font-weight:700; transition:all .3s;
 }
 .map-link:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(30,111,207,.4);}
 
@@ -437,15 +404,10 @@ nav{
    FOOTER
 ══════════════════════════════════ */
 footer{
-  position:relative;z-index:1;
-  background:#edf2f7;  
-  border-top:2px solid var(--border);
-  padding:0 60px;
+  position:relative;z-index:1; background:#edf2f7; border-top:2px solid var(--border); padding:0 60px;
 }
 .footer-top{
-  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;
-  gap:50px;padding:50px 0 40px;
-  border-bottom:1px solid var(--border);
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr; gap:50px;padding:50px 0 40px; border-bottom:1px solid var(--border);
 }
 .footer-brand .logo{display:flex;align-items:center;gap:8px;font-family:'Plus Jakarta Sans', sans-serif;font-size:1.35rem;font-weight:800;color:var(--text-main);margin-bottom:14px;}
 .footer-brand p{font-size:.85rem;color:var(--text-muted);line-height:1.7;font-weight:600;}
@@ -455,16 +417,12 @@ footer{
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:20px 0;}
 .footer-copy{font-size:.8rem;color:var(--text-light);font-weight:600;}
 
-/* ══════════════════════════════════
-   ANIMATIONS / REVEAL
-══════════════════════════════════ */
+/* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
-/* ══════════════════════════════════
-   MOBILE
-══════════════════════════════════ */
+/* ── MOBILE ── */
 @media(max-width:960px){
   nav{padding:0 20px;}
   .gnb{display:none;}
@@ -483,6 +441,7 @@ footer{
 
 <canvas id="bg-canvas"></canvas>
 
+<!-- ══ NAV ══ -->
 <nav>
   <div style="display:flex;align-items:center;gap:0;">
     <div class="nav-logo" onclick="showPage('home')">
@@ -535,8 +494,11 @@ footer{
   </div>
 </nav>
 
+<!-- ══════════════════════════
+     HOME PAGE
+══════════════════════════ -->
 <div id="page-home" class="page active">
-
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
@@ -556,6 +518,7 @@ footer{
     </div>
   </div>
 
+  <!-- 서비스 미리보기 -->
   <section class="sec home-services">
     <div class="inner">
       <div class="reveal" style="text-align:center;max-width:560px;margin:0 auto 0;">
@@ -616,6 +579,7 @@ footer{
     </div>
   </section>
 
+  <!-- 숫자로 보는 DeepSecu -->
   <section class="sec home-numbers">
     <div class="inner">
       <div class="reveal" style="text-align:center;">
@@ -635,6 +599,9 @@ footer{
   </section>
 </div>
 
+<!-- ══════════════════════════
+     COMPANY PAGE
+══════════════════════════ -->
 <div id="page-company" class="page">
   <div class="page-banner">
     <div class="breadcrumb">Home > <span>Company</span></div>
@@ -649,6 +616,7 @@ footer{
     </div>
   </div>
 
+  <!-- 회사소개 패널 -->
   <div id="ctab-about" class="biz-panel active">
     <section class="sec">
       <div class="inner about-grid">
@@ -690,6 +658,7 @@ footer{
     </section>
   </div>
 
+  <!-- 걸어온 길 패널 -->
   <div id="ctab-history" class="biz-panel">
     <section class="sec">
       <div class="inner" style="max-width:750px;">
@@ -708,6 +677,9 @@ footer{
   </div>
 </div>
 
+<!-- ══════════════════════════
+     BUSINESS PAGE (자산 전면 매핑)
+══════════════════════════ -->
 <div id="page-business" class="page">
   <div class="page-banner">
     <div class="breadcrumb">Home > <span>Business</span></div>
@@ -721,15 +693,18 @@ footer{
         <button class="biz-tab active" onclick="switchBizTab(0)">정보보안 컨설팅</button>
         <button class="biz-tab" onclick="switchBizTab(1)">개인정보보호 컨설팅</button>
         <button class="biz-tab" onclick="switchBizTab(2)">ISMS 인증 컨설팅</button>
-        <button class="biz-tab" onclick="switchBizTab(3)">시스템 보안</button>
+        <button class="biz-tab" onclick="switchBizTab(3)">정보통신시스템 보안</button>
         <button class="biz-tab" onclick="switchBizTab(4)">보안 사고 대응</button>
         <button class="biz-tab" onclick="switchBizTab(5)">보안 교육·훈련</button>
         <button class="biz-tab" onclick="switchBizTab(6)">세미나 운영</button>
       </div>
 
+      <!-- 패널 0: 정보보안 컨설팅 -->
       <div class="biz-panel active" id="bp0">
         <div class="biz-detail">
-          <div class="biz-visual"><div class="icon-big">🔒</div><h3>정보보안 컨설팅</h3><p style="color:var(--text-light);font-size:.82rem;margin-top:8px;">Security Consulting</p></div>
+          <div class="biz-visual-img">
+            <img src="image_e423a6.png" alt="정보보안 컨설팅">
+          </div>
           <div class="biz-info">
             <h2>체계적인 보안 아키텍처 설계</h2>
             <p>기업의 IT 인프라 전반에 대한 보안 현황을 진단하고, 최적화된 보안 아키텍처를 설계합니다. 취약점 분석과 모의해킹을 통해 실제 위협에 대응할 수 있는 체계를 구축합니다.</p>
@@ -740,20 +715,21 @@ footer{
               <li>보안 솔루션 도입 컨설팅</li>
               <li>보안 운영 체계 구축 및 지원</li>
             </ul>
-            <div class="svc-tags" style="gap:6px;"><span class="tag">보안 아키텍처</span><span class="tag">취약점 분석</span><span class="tag">모의해킹</span><span class="tag">보안정책</span><span class="tag">리스크 관리</span></div>
+            <div class="svc-tags" style="gap:6px;"><span class="tag">보안 아키텍처</span><span class="tag">취약점 분석</span><span class="tag">모의해킹</span><span class="tag">보안정책</span></div>
             <div class="process-steps">
               <div class="step"><div class="step-n">01</div><div class="step-info"><h5>현황 진단</h5><p>현재 보안 수준 및 취약점 전수 조사</p></div></div>
               <div class="step"><div class="step-n">02</div><div class="step-info"><h5>분석 및 설계</h5><p>위협 모델링 및 보안 아키텍처 설계</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>구축 지원</h5><p>보안 정책·솔루션 구축 및 적용</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>사후 관리</h5><p>지속적 모니터링 및 정기 점검</p></div></div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 패널 1: 개인정보보호 컨설팅 -->
       <div class="biz-panel" id="bp1">
         <div class="biz-detail">
-          <div class="biz-visual"><div class="icon-big">👤</div><h3>개인정보보호 컨설팅</h3><p style="color:var(--text-light);font-size:.82rem;margin-top:8px;">Privacy Consulting</p></div>
+          <div class="biz-visual-img">
+            <img src="image_e42691.png" alt="개인정보보호 컨설팅">
+          </div>
           <div class="biz-info">
             <h2>개인정보보호 법규 완벽 대응</h2>
             <p>개인정보보호법, GDPR 등 국내외 개인정보 관련 법령을 준수하는 체계를 구축합니다. 공공기관 보호수준 평가 및 내부관리계획 정립을 기반으로 법적 리스크를 전면 최소화합니다.</p>
@@ -762,22 +738,22 @@ footer{
               <li>개인정보 처리 현황 진단 및 갭 분석</li>
               <li>개인정보 처리방침 및 내부관리계획 수립·개정</li>
               <li>개인정보보호 책임자(CPO) 정기 지원 가이드</li>
-              <li>GDPR·국제 규범 대응 컴플라이언스</li>
             </ul>
-            <div class="svc-tags" style="gap:6px;"><span class="tag">개인정보보호법</span><span class="tag">보호수준 평가</span><span class="tag">CPO 지원</span><span class="tag">처리방침</span></div>
+            <div class="svc-tags" style="gap:6px;"><span class="tag">개인정보보호법</span><span class="tag">보호수준 평가</span><span class="tag">CPO 지원</span></div>
             <div class="process-steps">
               <div class="step"><div class="step-n">01</div><div class="step-info"><h5>현황 진단</h5><p>개인정보 처리 흐름 및 법규 준수 현황 분석</p></div></div>
               <div class="step"><div class="step-n">02</div><div class="step-info"><h5>체계 수립</h5><p>처리방침·내부관리계획 수립 및 개정</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>교육·훈련</h5><p>개인정보 취급자 교육 및 인식 제고</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>점검·유지</h5><p>정기 점검 및 법규 변경 대응 지원</p></div></div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 패널 2: ISMS 인증 컨설팅 -->
       <div class="biz-panel" id="bp2">
         <div class="biz-detail">
-          <div class="biz-visual"><div class="icon-big">🏆</div><h3>ISMS 인증 컨설팅</h3><p style="color:var(--text-light);font-size:.82rem;margin-top:8px;">ISMS Certification</p></div>
+          <div class="biz-visual-img">
+            <img src="image_e426cd.png" alt="ISMS 인증 컨설팅">
+          </div>
           <div class="biz-info">
             <h2>ISMS·ISMS-P 인증 취득 전문 지원</h2>
             <p>ISMS, ISMS-P, ISO 27001 인증 취득을 위한 전문 컨설팅을 제공합니다. 갭 분석부터 인증 심사 대응까지 전 과정을 체계적으로 지원하여 높은 인증 취득률을 달성합니다.</p>
@@ -786,22 +762,22 @@ footer{
               <li>정보보호 정책·지침 체계 수립</li>
               <li>인증 심사 대비 모의 심사 수행</li>
               <li>심사 기관 대응 지원 및 현장 동행</li>
-              <li>사후 관리 및 갱신 심사 지원</li>
             </ul>
-            <div class="svc-tags" style="gap:6px;"><span class="tag">ISMS</span><span class="tag">ISMS-P</span><span class="tag">ISO 27001</span><span class="tag">모의심사</span></div>
+            <div class="svc-tags" style="gap:6px;"><span class="tag">ISMS</span><span class="tag">ISMS-P</span><span class="tag">모의심사</span></div>
             <div class="process-steps">
               <div class="step"><div class="step-n">01</div><div class="step-info"><h5>갭 분석</h5><p>인증 요건 대비 현황 분석 및 개선 과제 도출</p></div></div>
               <div class="step"><div class="step-n">02</div><div class="step-info"><h5>체계 구축</h5><p>정책·지침·절차 문서 체계 수립</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>모의 심사</h5><p>실제 심사 전 모의 심사로 취약점 보완</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>심사 대응</h5><p>현장 심사 동행 및 질의 대응 지원</p></div></div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 패널 3: 정보통신시스템 보안 -->
       <div class="biz-panel" id="bp3">
         <div class="biz-detail">
-          <div class="biz-visual"><div class="icon-big">🖥️</div><h3>정보통신시스템 보안</h3><p style="color:var(--text-light);font-size:.82rem;margin-top:8px;">IT System Security</p></div>
+          <div class="biz-visual-img">
+            <img src="image_e42708.png" alt="정보통신시스템 보안">
+          </div>
           <div class="biz-info">
             <h2>인프라 전반 보안 체계 구축</h2>
             <p>서버, 네트워크, 클라우드 등 정보통신시스템 전반의 보안을 설계하고 구축합니다. 최신 사이버 위협에 대응하는 기술적 보안 체계를 수립합니다.</p>
@@ -810,22 +786,22 @@ footer{
               <li>서버·엔드포인트 보안 강화</li>
               <li>클라우드(AWS/Azure/GCP) 보안</li>
               <li>망분리·망연계 시스템 구축</li>
-              <li>보안 관제 체계 수립 지원</li>
             </ul>
-            <div class="svc-tags" style="gap:6px;"><span class="tag">네트워크 보안</span><span class="tag">클라우드</span><span class="tag">서버 보안</span><span class="tag">망분리</span></div>
+            <div class="svc-tags" style="gap:6px;"><span class="tag">네트워크 보안</span><span class="tag">클라우드</span><span class="tag">서버 보안</span></div>
             <div class="process-steps">
               <div class="step"><div class="step-n">01</div><div class="step-info"><h5>인프라 진단</h5><p>현재 시스템 보안 수준 전수 진단</p></div></div>
               <div class="step"><div class="step-n">02</div><div class="step-info"><h5>설계</h5><p>최적 보안 아키텍처 및 솔루션 설계</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>구축·적용</h5><p>보안 솔루션 도입 및 설정 최적화</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>운영 지원</h5><p>정기 점검 및 보안 패치 관리</p></div></div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 패널 4: 보안 사고 대응 -->
       <div class="biz-panel" id="bp4">
         <div class="biz-detail">
-          <div class="biz-visual"><div class="icon-big">🚨</div><h3>보안 사고 대응</h3><p style="color:var(--text-light);font-size:.82rem;margin-top:8px;">Incident Response</p></div>
+          <div class="biz-visual-img">
+            <img src="image_e4272a.png" alt="보안 사고 대응">
+          </div>
           <div class="biz-info">
             <h2>신속·정확한 침해사고 대응</h2>
             <p>랜섬웨어, 해킹, 개인정보 유출 등 보안 사고 발생 시 즉각적으로 대응합니다. 정확한 원인 분석과 증거 보전, 신속한 복구로 피해를 최소화합니다.</p>
@@ -833,63 +809,59 @@ footer{
               <li>침해사고 초기 대응 및 봉쇄</li>
               <li>디지털 포렌식 및 원인 분석</li>
               <li>랜섬웨어 피해 복구 지원</li>
-              <li>개인정보 유출 신고 및 대응 지원</li>
               <li>재발 방지 체계 수립</li>
             </ul>
-            <div class="svc-tags" style="gap:6px;"><span class="tag">침해사고 대응</span><span class="tag">디지털 포렌식</span><span class="tag">랜섬웨어</span><span class="tag">복구</span></div>
+            <div class="svc-tags" style="gap:6px;"><span class="tag">침해사고 대응</span><span class="tag">디지털 포렌식</span><span class="tag">복구</span></div>
             <div class="process-steps">
               <div class="step"><div class="step-n">01</div><div class="step-info"><h5>긴급 대응</h5><p>사고 접수 후 즉시 현장 출동 및 격리</p></div></div>
               <div class="step"><div class="step-n">02</div><div class="step-info"><h5>원인 분석</h5><p>포렌식 기반 공격 경로 및 피해 범위 파악</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>복구 지원</h5><p>시스템 및 데이터 복구 지원</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>재발 방지</h5><p>취약점 개선 및 재발 방지 체계 수립</p></div></div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 패널 5: 보안 교육·훈련 -->
       <div class="biz-panel" id="bp5">
         <div class="biz-detail">
-          <div class="biz-visual"><div class="icon-big">📚</div><h3>보안 교육·훈련</h3><p style="color:var(--text-light);font-size:.82rem;margin-top:8px;">Security Education</p></div>
+          <div class="biz-visual-img">
+            <img src="image_e42766.png" alt="보안 교육·훈련">
+          </div>
           <div class="biz-info">
             <h2>맞춤형 보안 인식 교육·훈련</h2>
             <p>임직원의 보안 인식 향상을 위한 체계적인 교육 프로그램을 제공합니다. 실제 공격 시나리오 기반의 악성 메일 모의훈련으로 실전 대응 능력을 확실히 강화합니다.</p>
             <ul class="biz-list">
               <li>공공기관 지침에 따른 임직원 정보보안 인식 교육</li>
-              <li>실전형 악성메일/피싱 메일 모의훈련 및 통계 분석 결과 제공</li>
+              <li>실전형 악성메일/피싱 메일 모의훈련 및 결과 데이터 제공</li>
               <li>경영진·개인정보취급자 대상 전문 심화 교육</li>
-              <li>개인정보보호 법정 의무 교육 지원</li>
-              <li>비대면·온라인 맞춤 교육 콘텐츠 구성</li>
             </ul>
             <div class="svc-tags" style="gap:6px;"><span class="tag">보안 인식교육</span><span class="tag">악성메일 모의훈련</span><span class="tag">법정교육</span></div>
             <div class="process-steps">
-              <div class="step"><div class="step-n">01</div><div class="step-info"><h5>교육 기획</h5><p>기업 맞춤 교육 커리큘럼 설계</p></div></div>
-              <div class="step"><div class="step-n">02</div><div class="step-info"><h5>교육 실시</h5><p>집합·비대면 교육 운영</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>모의훈련</h5><p>피싱·사회공학 모의훈련 실시</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>결과 분석</h5><p>교육 효과 측정 및 개선 리포트 제공</p></div></div>
+              <div class="step"><div class="step-n">01</div><div class="step-info"><h5>비전 수립</h5><p>기업 맞춤 교육 커리큘럼 설계</p></div></div>
+              <div class="step"><div class="step-n">02</div><div class="step-info"><h5>훈련 실시</h5><p>피싱·사회공학 모의훈련 및 리포팅</p></div></div>
             </div>
           </div>
         </div>
       </div>
 
-    <div class="biz-panel" id="bp6">
+      <!-- 패널 6: 세미나 운영 (실제 오프라인 미팅룸 사진 매핑) -->
+      <div class="biz-panel" id="bp6">
         <div class="biz-detail">
-         <div class="biz-visual" style="padding:0;overflow:hidden;position:relative;"><img src="seminar.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:16px;"><h3 style="position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.7);">세미나 운영</h3></div>
+          <div class="biz-visual-img">
+            <img src="image_e42a6e.jpg" alt="세미나 운영">
+          </div>
           <div class="biz-info">
-            <h2>정보보안 전문 세미나</h2>
-            <p>딥시큐(DeepSecu)가 주관하는 정보보안 전문 세미나를 통해 최신 보안 트렌드와 실전 사례를 공유합니다. 현장 전문가의 강의와 네트워킹 기회를 제공합니다.</p>
+            <h2>정보보안 전문 세미나 및 워크숍</h2>
+            <p>딥시큐(DeepSecu)가 주관하는 정보보안 전문 세미나를 통해 최신 보안 트렌드와 실전 규제 대응 사례를 공유합니다. 현장 전문가 그룹과의 지식 교류 및 실무 워크숍을 제공합니다.</p>
             <ul class="biz-list">
-              <li>최신 정보보안 법규 및 트렌드 세미나</li>
-              <li>침해사고 사례 분석 및 대응 워크숍</li>
-              <li>개인정보보호 실무 교육 세미나</li>
-              <li>ISMS 인증 취득 실무 가이드 세미나</li>
-              <li>참가 수료증 발급</li>
+              <li>최신 정보보안 법규 및 정부 가이드라인 세미나</li>
+              <li>자치구 유관기관 초청 침해사고 대응 분석 정보교류</li>
+              <li>개인정보보호 및 ISMS 인증 실무 가이드 프로세스</li>
+              <li>지정 세미나 정식 참가 수료증 발급</li>
             </ul>
             <div class="svc-tags" style="gap:6px;"><span class="tag">보안 세미나</span><span class="tag">워크숍</span><span class="tag">네트워킹</span><span class="tag">수료증</span></div>
             <div class="process-steps">
-              <div class="step"><div class="step-n">01</div><div class="step-info"><h5>세미나 기획</h5><p>주제 선정 및 전문 강사 섭외</p></div></div>
-              <div class="step"><div class="step-n">02</div><div class="step-info"><h5>사전 신청</h5><p>참가 신청 접수 및 안내 발송</p></div></div>
-              <div class="step"><div class="step-n">03</div><div class="step-info"><h5>세미나 진행</h5><p>강의 및 실습, Q&A 세션 운영</p></div></div>
-              <div class="step"><div class="step-n">04</div><div class="step-info"><h5>수료증 발급</h5><p>참가 확인 후 수료증 발급</p></div></div>
+              <div class="step"><div class="step-n">01</div><div class="step-info"><h5>세미나 기획</h5><p>주제 선정 및 전문 강사 조율</p></div></div>
+              <div class="step"><div class="step-n">02</div><div class="step-info"><h5>수료증 발급</h5><p>참가 전수 확인 후 확인증 정식 발급</p></div></div>
             </div>
             <a class="btn-p" href="#" onclick="showPage('seminar');return false;" style="margin-top:24px;">세미나 일정 보기 →</a>
           </div>
@@ -900,8 +872,10 @@ footer{
   </section>
 </div>
 
+<!-- ══════════════════════════
+     PERFORMANCE PAGE
+ ══════════════════════════ -->
 <div id="page-performance" class="page">
-
   <div class="page-banner">
     <div class="breadcrumb">Home > <span>Performance</span></div>
     <h1>수행 실적</h1>
@@ -915,6 +889,7 @@ footer{
     </div>
   </div>
 
+  <!-- 수행실적 -->
   <div id="ptab-records">
     <section class="sec">
       <div class="inner">
@@ -951,6 +926,7 @@ footer{
     </section>
   </div>
 
+  <!-- 주요고객사 -->
   <div id="ptab-clients" style="display:none;">
     <section class="sec">
       <div class="inner">
@@ -973,6 +949,9 @@ footer{
   </div>
 </div>
 
+<!-- ══════════════════════════
+     CONTACT PAGE
+══════════════════════════ -->
 <div id="page-contact" class="page">
   <div class="page-banner">
     <div class="breadcrumb">Home > <span>Contact Us</span></div>
@@ -1025,8 +1004,8 @@ footer{
             <div class="privacy-box">
               [개인정보 수집 및 이용 안내]<br>
               1. 수집 항목: 성함, 회사명, 연락처, 이메일 주소<br>
-              2. 수집 목적: 보안 컨설팅 및 무료 상담 서비스 제공, 관련 안내 및 문의 응대<br>
-              3. 보유 및 이용 기간: 목적 달성 후 1년 또는 정보 주체의 파기 요청 시까지 관련 법령에 따라 보관합니다.
+              2. 수집 목적: 보안 컨설팅 및 무료 상담 서비스 제공, 응대<br>
+              3. 보유 기간: 목적 달성 후 1년 또는 정보 주체 파기 요청 시까지 관련 법령 준수 보관.
             </div>
             <label class="privacy-check">
               <input type="checkbox" name="개인정보동의" value="동의함" required>
@@ -1039,6 +1018,7 @@ footer{
       </div>
     </div>
 
+    <!-- 지도 영역 -->
     <div class="inner">
       <div class="map-wrap" id="map-section">
         <iframe
@@ -1063,6 +1043,7 @@ footer{
   </section>
 </div>
 
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-top inner">
     <div class="footer-brand">
@@ -1116,7 +1097,6 @@ function showPage(id, sub){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
-  // 서브 처리
   if(id==='business'&&sub!==undefined) switchBizTab(typeof sub==='number'?sub:0);
   if(id==='company'&&sub) switchCompanyTab(null,sub);
   if(id==='performance'&&sub) switchPerfTab(null,sub);
@@ -1125,11 +1105,9 @@ function showPage(id, sub){
       document.getElementById('map-section')?.scrollIntoView({behavior:'smooth'});
     }, 200);
   }
-  // nav 활성
   document.querySelectorAll('.gnb > li > a').forEach(a=>a.classList.remove('active'));
   const map={company:'Company',business:'Business',performance:'Performance',contact:'Contact Us'};
   if(map[id]) document.querySelectorAll('.gnb > li > a').forEach(a=>{if(a.textContent.trim()===map[id])a.classList.add('active');});
-  // 리빌
   setTimeout(()=>{
     document.querySelectorAll('#page-'+id+' .reveal').forEach((el,i)=>{
       setTimeout(()=>el.classList.add('visible'),i*80);
