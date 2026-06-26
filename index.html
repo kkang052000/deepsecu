@@ -14,27 +14,28 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <style>
 :root {
-  /* AI/보안 트렌드 라이트 테마 변수 */
+  /* 확실한 시인성을 보장하는 AI 보안 라이트 테마 변수 */
   --bg-light: #ffffff;
-  --bg-gray: #f4f7fa;      
-  --bg-banner: linear-gradient(135deg, #eaf2fb 0%, #f3f8fe 100%);
+  --bg-gray: #f5f8fc;      
+  /* 데이터 아키텍처 감성의 다중 그라디언트 배너 */
+  --bg-banner: linear-gradient(135deg, #e4effb 0%, #f0f6fd 50%, #f7faff 100%);
   
-  --text-main: #0b132b;    /* 배경과 극명한 대비를 이루는 묵직한 흑청색 */
-  --text-muted: #334155;   /* 본문 진열 및 서브 텍스트용 다크 그레이 */
-  --text-light: #475569;   /* 부연 설명이나 비활성 탭 폰트 */
+  --text-main: #0a1128;    /* 배경과 극명한 대비를 이루는 묵직한 흑청색 */
+  --text-muted: #2d3748;   /* 본문 진열 및 서브 텍스트용 다크 그레이 */
+  --text-light: #4a5568;   /* 부연 설명이나 비활성 탭 폰트 */
   
   --accent: #1e6fcf;       /* 브랜드 핵심 신뢰 블루 */
   --bright: #1b7cf2;       /* 가시성이 확보된 트렌디 브라이트 블루 */
   --cyan: #008cb8;         /* 선명한 딥 사이언 블루 */
   
-  --card-bg: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.85);
   --border: #cbd5e1;       
-  --shadow: rgba(11, 19, 43, 0.08);
+  --shadow: rgba(10, 17, 40, 0.06);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 
-/* 글로벌 글꼴 설정: 프리텐다드를 기본으로 하고 자간을 약간 좁혀 최상의 가독성 구현 */
+/* 글로벌 글꼴 설정 */
 body {
   background: var(--bg-light);
   color: var(--text-main);
@@ -45,7 +46,7 @@ body {
 }
 
 /* ── CANVAS ── */
-#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.4;}
+#bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;}
 
 /* ══════════════════════════════════
    NAV
@@ -118,37 +119,45 @@ nav{
 .page.active{display:block;}
 
 /* ══════════════════════════════════
-   PAGE HERO BANNER (서브페이지용)
+   PAGE HERO BANNER (서브페이지 기술적 배경 레이어 고도화)
 ══════════════════════════════════ */
 .page-banner{
   position:relative;z-index:1;
-  padding:75px 60px 55px;
-  background:var(--bg-banner);
+  padding:80px 60px 60px;
+  background: var(--bg-banner);
   border-bottom:1px solid var(--border);
   overflow:hidden;
 }
+/* 매트릭스 그리드 인프라 오버레이 */
 .page-banner::before{
-  content:'';position:absolute;top:-50%;right:-10%;
-  width:500px;height:500px;
-  background:radial-gradient(circle,rgba(30,111,207,.12) 0%,transparent 70%);
+  content:'';position:absolute;inset:0;
+  background-image: linear-gradient(rgba(30,111,207,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(30,111,207,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 80% 50%, black, transparent 75%);
+  -webkit-mask-image: radial-gradient(circle at 80% 50%, black, transparent 75%);
+}
+.page-banner::after{
+  content:'';position:absolute;top:-20%;right:-5%;
+  width:450px;height:450px;
+  background:radial-gradient(circle,rgba(30,111,207,.15) 0%,transparent 70%);
   border-radius:50%;
 }
 .page-banner .breadcrumb{
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size:.8rem;color:var(--text-light);letter-spacing:0.5px;
-  margin-bottom:14px;font-weight:600;
+  margin-bottom:14px;font-weight:700;position:relative;z-index:2;
 }
 .page-banner .breadcrumb span{color:var(--accent);}
 .page-banner h1{
   font-size:clamp(2.2rem,4vw,3.2rem);font-weight:800;
-  color:var(--text-main);letter-spacing:-0.04em;margin-bottom:12px;
+  color:var(--text-main);letter-spacing:-0.04em;margin-bottom:12px;position:relative;z-index:2;
 }
-.page-banner p{color:var(--text-muted);font-size:1rem;font-weight:500;line-height:1.5;}
+.page-banner p{color:var(--text-muted);font-size:1rem;font-weight:500;line-height:1.5;position:relative;z-index:2;}
 
 /* ══════════════════════════════════
    COMMON SECTION
 ══════════════════════════════════ */
-.sec{position:relative;z-index:1;padding:90px 60px;}
+.sec{position:relative;z-index:1;padding:95px 60px;}
 .sec-label{font-family:'Plus Jakarta Sans', sans-serif;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:700;}
 .sec-title{font-size:clamp(1.9rem,3vw,2.6rem);font-weight:800;color:var(--text-main);margin-bottom:16px;letter-spacing:-0.04em;line-height:1.25;}
 .sec-desc{color:var(--text-muted);font-size:.98rem;line-height:1.8;max-width:580px;font-weight:500;}
@@ -160,12 +169,13 @@ nav{
 .btn-o{border:2px solid var(--accent);color:var(--accent);padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;transition:all .3s;display:inline-block;background:#ffffff;}
 .btn-o:hover{background:rgba(30,111,207,.08);border-color:var(--bright);color:var(--bright);}
 
-/* 카드 공통 */
+/* 카드 공통 - 글래스모피즘 오버레이 처리 */
 .card{
   background:var(--card-bg);
-  border:1px solid var(--border);
+  backdrop-filter: blur(10px);
+  border:1px solid rgba(203, 213, 225, 0.7);
   border-radius:14px;padding:36px 32px;
-  box-shadow:0 6px 18px var(--shadow);
+  box-shadow:0 6px 20px var(--shadow);
   transition:all .35s;
 }
 .card:hover{border-color:var(--bright);transform:translateY(-6px);box-shadow:0 18px 40px rgba(30,111,207,.15);}
@@ -178,20 +188,23 @@ nav{
   min-height:calc(100vh - 68px);
   display:flex;align-items:center;
   padding:90px 60px;overflow:hidden;
-  background:linear-gradient(180deg, #f1f6fb 0%, #ffffff 100%); 
+  /* 트렌디한 깊이감을 위한 테크니컬 공간 왜곡 효과 레이아웃 배경 */
+  background: radial-gradient(circle at 80% 20%, #eaf3fc 0%, #f4f8fd 40%, #ffffff 80%);
 }
 .hero-grid{
   position:absolute;inset:0;
-  background-image:linear-gradient(rgba(30,111,207,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(30,111,207,.05) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(30,111,207,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(30,111,207,.06) 1px,transparent 1px);
   background-size:55px 55px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
   animation:gridScroll 22s linear infinite;
 }
 @keyframes gridScroll{from{background-position:0 0}to{background-position:55px 55px}}
-.hero-glow{position:absolute;top:15%;right:8%;width:480px;height:480px;background:radial-gradient(circle,rgba(30,111,207,.12) 0%,transparent 70%);border-radius:50%;animation:glowPulse 5s ease-in-out infinite;}
-@keyframes glowPulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.12);opacity:1}}
+.hero-glow{position:absolute;top:10%;right:5%;width:550px;height:550px;background:radial-gradient(circle,rgba(30,111,207,.16) 0%,transparent 70%);border-radius:50%;animation:glowPulse 5s ease-in-out infinite;}
+@keyframes glowPulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.15);opacity:0.9}}
 
 .hero-content{position:relative;max-width:680px;}
-.hero-badge{font-family:'Plus Jakarta Sans', sans-serif;display:inline-flex;align-items:center;gap:8px;background:rgba(30,111,207,.08);border:1px solid rgba(30,111,207,.25);padding:6px 18px;border-radius:20px;font-size:.76rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;font-weight:700;animation:fadeUp .7s ease both;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(30,111,207,.08);border:1px solid rgba(30,111,207,.25);padding:6px 18px;border-radius:20px;font-size:.76rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;font-weight:700;animation:fadeUp .7s ease both;}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--bright);border-radius:50%;animation:blink 1.6s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
 .hero-title{font-size:clamp(3rem,5.5vw,4.8rem);font-weight:900;line-height:1.15;color:var(--text-main);letter-spacing:-0.04em;margin-bottom:16px;animation:fadeUp .7s .1s ease both;}
@@ -208,7 +221,19 @@ nav{
 .stat-label{font-size:.78rem;color:var(--text-light);margin-top:4px;font-weight:700;}
 
 /* 홈 - 서비스 미리보기 */
-.home-services{background:var(--bg-gray);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.home-services{
+  background:var(--bg-gray);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+/* 서비스 배경 스틀 가미 */
+.home-services::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(#1e6fcf 0.5px, transparent 0.5px);
+  background-size: 24px 24px; opacity: 0.25;
+  mask-image: linear-gradient(to right, transparent, black 50%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 50%, transparent);
+}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px;}
 .svc-card{position:relative;overflow:hidden;}
 .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--bright));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
@@ -223,8 +248,12 @@ nav{
 .svc-more:hover{gap:10px;}
 
 /* 홈 - 수치 */
-.home-numbers{background:var(--bg-light);}
-.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:50px;}
+.home-numbers{background:var(--bg-light); position: relative;}
+.home-numbers::before {
+  content: ''; position: absolute; top:0; left: 10%; width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.05) 0%, transparent 70%);
+}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:50px;position: relative; z-index: 2;}
 .num-item{background:var(--card-bg);padding:38px 28px;text-align:center;}
 .num-big{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;color:var(--accent);line-height:1;margin-bottom:6px;letter-spacing:1px;}
 .num-label{font-size:.88rem;color:var(--text-muted);line-height:1.6;font-weight:700;}
@@ -270,6 +299,9 @@ nav{
   border-radius:16px;padding:48px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   min-height:320px;text-align:center;
+  /* 모눈종이 보안 검증 인프라 배경 텍스처 오버레이 */
+  background-image: radial-gradient(rgba(30,111,207,0.06) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
 }
 .biz-visual .icon-big{font-size:4rem;margin-bottom:16px;}
 .biz-visual h3{font-size:1.5rem;font-weight:800;color:var(--accent);letter-spacing:-0.03em;}
@@ -305,7 +337,7 @@ nav{
 .pf-desc{font-size:.85rem;color:var(--text-muted);line-height:1.6;font-weight:500;}
 .pf-badge{display:inline-block;background:rgba(30,111,207,.08);border:1px solid rgba(30,111,207,.2);color:var(--accent);font-size:.72rem;padding:3px 10px;border-radius:4px;font-weight:700;margin-top:12px;}
 
-/* 주요고객 - 데스크톱 4열 / 태블릿-모바일 그리드 미세패치 */
+/* 주요고객 */
 .client-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;}
 .client-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:24px;text-align:center;box-shadow:0 5px 14px var(--shadow);transition:all .3s;}
 .client-card:hover{border-color:var(--bright);transform:translateY(-3px);}
@@ -622,7 +654,7 @@ footer{
         <div>
           <p class="sec-label">About DeepSecu</p>
           <h2 class="sec-title">보안을 넘어<br>신뢰를 설계합니다</h2>
-          <p class="sec-desc" style="max-width:100%;margin-bottom:24px;">딥시큐(DeepSecu)는 정보통신시스템 보안과 개인정보보호 분야의 전문 컨설팅 기업입니다. 기업의 복잡한 보안 환경을 정밀하게 분석하고, 최적화된 솔루션으로 안전한 IT 환경을 구축합니다.</p>
+          <p class="sec-desc" style="max-width:100%;margin-bottom:24px;">딥시큐(DeepSecu)는 정보보안과 개인정보보호 분야의 전문 컨설팅 기업입니다. 기업의 복잡한 보안 환경을 정밀하게 분석하고, 최적화된 솔루션으로 안전한 IT 환경을 구축합니다.</p>
           <p class="sec-desc" style="max-width:100%;">단순한 컨설팅을 넘어 고객사와 장기적인 파트너십을 구축하며, 지속적인 보안 역량 향상을 지원합니다. 기업의 규모와 업종에 상관없이 맞춤형 보안 솔루션을 제공합니다.</p>
           <div class="about-feat-grid" style="margin-top:28px;">
             <div class="feat-card"><div class="feat-icon">🛡️</div><div class="feat-title">전문 인증 보유</div><div class="feat-desc">CISA, CISSP 등 국내외 보안 전문 자격 보유 컨설턴트</div></div>
@@ -911,7 +943,7 @@ footer{
     </section>
   </div>
 
-  <!-- 주요고객사 (국립극단 추가 완료) -->
+  <!-- 주요고객사 -->
   <div id="ptab-clients" style="display:none;">
     <section class="sec">
       <div class="inner">
